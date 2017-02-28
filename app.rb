@@ -21,17 +21,13 @@ get '/cat' do
   erb(:index)
 end
 
-post '/named-cat' do
+get '/named-cat/:name' do
   p params
   @name = params[:name]
   erb :index
 end
 
-get '/form' do
-  erb :form
-end
-
-get '/named-cat/:name' do
+get '/named-cat' do  # one with the form tag
   p params
   @name = params[:name]
   erb :index
